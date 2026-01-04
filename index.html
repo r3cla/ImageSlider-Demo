@@ -187,21 +187,6 @@
 			isActive = false;
 		});
 
-		// Smooth sweep animation on load to showcase the images.
-		window.addEventListener('load', () => {
-			slider.style.transition = 'clip-path 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-			slider.style.setProperty('--pos', '0%');
-			
-			setTimeout(() => {
-				slider.style.setProperty('--pos', '100%');
-				
-				setTimeout(() => {
-					slider.style.transition = 'clip-path 80ms linear';
-					slider.style.setProperty('--pos', '50%');
-				}, 1200);
-			}, 200);
-		});
-
 		// Keyboard support for accessibility (arrow keys adjust the divider).
 		slider.tabIndex = 0;
 		slider.addEventListener('keydown', (event) => {
